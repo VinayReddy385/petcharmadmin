@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "predeploy": "npm run build",
-    "build": "babel app.js -o build/app.js --presets=@babel/preset-env",
+    "build": "npm i",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
