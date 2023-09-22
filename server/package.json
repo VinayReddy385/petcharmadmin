@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "ganesha": "nodemon ./bin/www",
     "predeploy": "npm run build",
     "build": "babel app.js -o build/app.js --presets=@babel/preset-env",
     "deploy": "gh-pages -d build"

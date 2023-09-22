@@ -1,3 +1,7 @@
+const dotenv=require('dotenv');
+dotenv.config({path:'./.env'})
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -13,7 +17,7 @@ var catRouter=require('./routes/cats')
 var smallpetRouter=require('./routes/smallpets')
 var birdRouter=require('./routes/birds')
 var app = express();
-mongoose.connect('mongodb+srv://meghavinayreddy:Pvinay%40143@mern.zthq2lz.mongodb.net/Pet-details')//
+mongoose.connect(process.env.DB_URL)//
 mongoose.connection.on('connected',()=>{//
   console.log("Database connected")
 })
