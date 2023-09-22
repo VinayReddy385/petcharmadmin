@@ -51,7 +51,7 @@ router.put('/:id',(req,res)=>{
             res.send(err)
       })
 })
-router.delete('/id',(req,res)=>{
+router.delete('/:id',(req,res)=>{
       const idQuery=req.params.id
       BirdModel.findByIdAndDelete(idQuery).then(response=>{
             res.send(response)

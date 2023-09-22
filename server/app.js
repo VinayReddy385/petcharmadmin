@@ -13,7 +13,7 @@ var catRouter=require('./routes/cats')
 var smallpetRouter=require('./routes/smallpets')
 var birdRouter=require('./routes/birds')
 var app = express();
-mongoose.connect('mongodb://127.0.0.1:27017/Dog-details')//
+mongoose.connect('mongodb+srv://meghavinayreddy:Pvinay%40143@mern.zthq2lz.mongodb.net/Pet-details')//
 mongoose.connection.on('connected',()=>{//
   console.log("Database connected")
 })
@@ -51,5 +51,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
