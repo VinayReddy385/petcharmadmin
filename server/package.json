@@ -1,10 +1,10 @@
 {
   "name": "serverfordog",
-  
+  "homepage": "http://VinayReddy385.github.io/server",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-     
+    "dev": "nodemon ./bin/www",
     "start": "node ./bin/www",
     "predeploy": "npm run build",
     "build": "babel app.js -o build/app.js --presets=@babel/preset-env",
